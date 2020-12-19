@@ -13,6 +13,8 @@ namespace IIDXMusicGachaBack.Entities
 
         public double Bpm { get; set; }
 
+        public double? MaxBpm { get; set; }
+
         public string Genre { get; set; }
 
         public int Level { get; set; }
