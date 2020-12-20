@@ -10,6 +10,7 @@ namespace IIDXMusicGachaBack.Entities.Dtos.Mappings
         public SongMapping()
         {
             CreateMap<Song, GetSongResponse>()
+                .ForMember(x => x.Bpm, y => y.MapFrom(z => z.MaxBpm != null ? z.Bpm.ToString() + " - " + z.MaxBpm.ToString() : z.Bpm.ToString()))
                 .IgnoreAllPropertiesWithAnInaccessibleSetter();
         }
     }
